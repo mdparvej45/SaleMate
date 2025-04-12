@@ -34,7 +34,7 @@ class CategoriesController extends Controller
 
         toast('Product Category Created!', 'success');
 
-        return redirect()->back();
+        return back();
     }
 
 

@@ -8,7 +8,7 @@
 <head>
 
     <meta charset="utf-8" />
-    <title>Sign In | Velzon - Admin & Dashboard Template</title>
+    <title>Login | SaleMate - POS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesbrand" name="author" />
@@ -16,15 +16,15 @@
     <link rel="shortcut icon" href="assets/images/favicon.ico">
 
     <!-- Layout config Js -->
-    <script src="{{ asset('assets/js/layout.js') }}"></script>
+    {{-- <script src="{{ asset('assets/js/layout.js') }}"></script> --}}
     <!-- Bootstrap Css -->
     <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- Icons Css -->
-    <link href="{{ asset('assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
+    {{-- <link href="{{ asset('assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" /> --}}
     <!-- App Css-->
     <link href="{{ asset('assets/css/app.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- custom Css-->
-    <link href="{{ asset('assets/css/custom.min.css') }}" rel="stylesheet" type="text/css" />
+    {{-- <link href="{{ asset('assets/css/custom.min.css') }}" rel="stylesheet" type="text/css" /> --}}
 
 </head>
 
@@ -114,7 +114,7 @@
                                                         placeholder="Password" name="password" id="password-input">
                                                         <button class="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted" type="button" id="password-addon"><i class="ri-eye-fill align-middle"></i></button>
                                                         @error('password')
-                                                        <div class="invalid-feedback">{{ $message }}</div>
+                                                        <div class="invalid-feedback"> {{ $message }}</div>
                                                         @enderror
                                                     </div>
                                                 </div>
@@ -167,14 +167,14 @@
 
     <!-- JAVASCRIPT -->
     <script src="{{ asset('assets/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('assets/libs/simplebar/simplebar.min.js') }}"></script>
-    <script src="{{ asset('assets/libs/node-waves/waves.min.js') }}"></script>
-    <script src="{{ asset('assets/libs/feather-icons/feather.min.js') }}"></script>
-    <script src="{{ asset('assets/js/pages/plugins/lord-icon-2.1.0.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins.js') }}"></script>
+    {{-- <script src="{{ asset('assets/libs/simplebar/simplebar.min.js') }}"></script> --}}
+    {{-- <script src="{{ asset('assets/libs/node-waves/waves.min.js') }}"></script> --}}
+    {{-- <script src="{{ asset('assets/libs/feather-icons/feather.min.js') }}"></script> --}}
+    {{-- <script src="{{ asset('assets/js/pages/plugins/lord-icon-2.1.0.js') }}"></script> --}}
+    {{-- <script src="{{ asset('assets/js/plugins.js') }}"></script> --}}
 
     <!-- password-addon init -->
-    <script src="{{ asset('assets/js/pages/password-addon.init.js') }}"></script>
+    {{-- <script src="{{ asset('assets/js/pages/password-addon.init.js') }}"></script> --}}
 </body>
 
 
