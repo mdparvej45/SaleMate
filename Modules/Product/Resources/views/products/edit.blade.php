@@ -14,6 +14,7 @@
     <div class="container-fluid mb-4">
         <form id="product-form" action="{{ route('products.update', $product->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
+            @method('PATCH')
             <div class="row">
                 <div class="col-lg-12">
                     @include('utils.alerts')

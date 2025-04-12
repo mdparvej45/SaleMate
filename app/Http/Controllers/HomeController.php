@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
 use Modules\Expense\Entities\Expense;
+use Modules\Product\Entities\Product;
 use Modules\Purchase\Entities\Purchase;
 use Modules\Purchase\Entities\PurchasePayment;
 use Modules\PurchasesReturn\Entities\PurchaseReturn;
@@ -33,13 +34,10 @@ class HomeController extends Controller
 
         $revenue = ($sales - $sale_returns) / 100;
         $profit = $revenue - $product_costs;
-
-        return view('home', [
-            'revenue'          => $revenue,
-            'sale_returns'     => $sale_returns / 100,
-            'purchase_returns' => $purchase_returns / 100,
-            'profit'           => $profit
-        ]);
+        $sale_returns     = $sale_returns / 100;
+        $purchase_returns = $purchase_returns / 100;
+        $products = Product::count();
+        return view('home', compact('revenue', 'profit', 'sale_returns', 'purchase_returns', 'products'));
     }
 
 

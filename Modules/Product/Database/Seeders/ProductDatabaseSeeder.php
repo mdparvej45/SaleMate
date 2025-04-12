@@ -36,7 +36,7 @@ class ProductDatabaseSeeder extends Seeder
         for ($i = 1; $i <= 50; $i++) {
         $products[] = [
             'product_name' => $faker->word(),
-            'product_code' => $faker->numberBetween(1, 10000),
+            'product_code' => $faker->unique()->numberBetween(10000, 99999),
             'product_barcode_symbology' => $faker->randomElement(['C128', 'C39', 'UPCA', 'UPCE', 'EAN13' ]),
             'product_quantity' => $faker->numberBetween(1, 100),
             'product_cost' => $faker->numberBetween(1, 10000),
