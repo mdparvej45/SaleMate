@@ -37,7 +37,9 @@ class HomeController extends Controller
         $sale_returns     = $sale_returns / 100;
         $purchase_returns = $purchase_returns / 100;
         $products = Product::count();
-        return view('home', compact('revenue', 'profit', 'sale_returns', 'purchase_returns', 'products'));
+        $sales = Sale::where('status', 'Completed')->whereDate('date', today())->count();
+        // dd($sales);
+        return view('home', compact('revenue', 'profit', 'sale_returns', 'purchase_returns', 'products', 'sales'));
     }
 
 
